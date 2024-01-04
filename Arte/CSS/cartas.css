@@ -1,0 +1,135 @@
+.galerias  .container{
+    display: grid;   /*utilizo grid para mostra mis cosas en forma de cuadriculo en este caos las cartas*/
+    grid-template-columns: repeat(7,1fr); /*aqui establesco el tamao del grid y la direccion en este caso columnas*/
+    width:100%;
+    margin:5%;
+    margin-top: 0px;
+    padding:0px;
+    grid-gap:30px;
+    transition: 300,ms;
+    -webkit-transition: 300,ms;
+    -moz-transition: 300,ms;
+    -ms-transition: 300,ms;
+    -o-transition: 300,ms;
+    overflow: auto;  
+    height: auto;
+}
+.galerias .container::-webkit-scrollbar{
+  width:0px;                                     /*Aqui modific mi scrollbar*/
+  height:7px;
+}
+.galerias .container::-webkit-scrollbar-thumb{
+  height:7px;
+  background-color: coral;
+  border-radius:5px;                                  /*Aqui modific mi scrollbar*/
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -ms-border-radius:5px;
+  -o-border-radius:5px;
+}
+.galerias .container img{
+  width: 300px;
+  height:200px;
+  padding:10px;
+  border-radius:15px;
+  transition:all 300ms;                    /*La propiedad transition nos permite establecer el tiempo de transision para el scale*/
+  -webkit-transition:all 300ms;
+  -moz-transition:all 300ms;
+  -ms-transition:all 300ms;
+  -o-transition:all 300ms;
+  -webkit-border-radius:15px;
+  -moz-border-radius:15px;
+  -ms-border-radius:15px;
+  -o-border-radius:15px;
+}
+.galerias .container :first-child:hover{      /*La funcion ::chil o nth chill nos permite modificar los hijos de un elemto sin modiciar al padre*/
+  scale:1.03;
+}
+.galerias .container :nth-child(1):hover{
+  scale:1.03;
+}
+.galerias .container :nth-child(2):hover{
+  scale:1.03;
+}
+.galerias .container :nth-child(3):hover{
+  scale:1.03;
+}
+.galerias .container :nth-child(4):hover{
+  scale:1.03;
+}
+.galerias .container :nth-child(5):hover{
+  scale:1.03;
+}
+.galerias .container :nth-child(6):hover{
+  scale:1.03;
+}
+.galerias .container :nth-child(7):hover{
+  scale:1.03;
+}
+  .galerias .container .text-bg-dark
+  {
+  font-size:20px;
+  padding:5px;
+  text-align: center;
+  position: fixed;           /*position fixed mantiene la posicion del elemento fijada*/
+  left: 111px;
+  top: 110px;
+  opacity: 75%;
+  }
+
+  @media screen and (max-width:800px) {     /*La opcion media screen nos permite cambair el estilo dependiendo del tamalño de la pantalla*/
+    
+    .galerias .container .text-bg-dark     /*text-bg es un elemnto del bootstrap llamado bagde*/
+    {
+    font-size:20px;
+    padding:5px;
+    text-align: center;
+    position: fixed;
+    left: 10px;
+    top: 60px;
+    opacity: 75%;
+    }
+    .galerias .container img{
+      width: 150px;
+      height:100px;
+      border-radius:5px;
+      transition:all 300ms;
+      -webkit-transition:all 300ms;
+      -moz-transition:all 300ms;
+      -ms-transition:all 300ms;
+      -o-transition:all 300ms;
+      -webkit-border-radius:5px;
+      -moz-border-radius:5px;
+      -ms-border-radius:5px;
+      -o-border-radius:5px;
+}
+  /*utilizo grid para mostra mis cosas en forma de cuadriculo en este caos las cartas*/
+  /*aqui establesco el tamao del grid y la direccion en este caso columnas*/
+.galerias .container{
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  width:100%;
+  margin:0%;
+  padding:0px;
+  grid-gap:30px;
+  transition: 300,ms;
+  -webkit-transition: 300,ms;
+  -moz-transition: 300,ms;
+  -ms-transition: 300,ms;
+  -o-transition: 300,ms;
+  overflow: auto;
+  height: auto;
+}
+::-webkit-scrollbar {
+  width:7px;
+  height:7px;                   /*Aqui modific mi scrollbar*/
+}
+::-webkit-scrollbar-track-thumb{
+  color: #000;
+  border-radius:5px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -ms-border-radius:5px;
+  -o-border-radius:5px;
+}
+}

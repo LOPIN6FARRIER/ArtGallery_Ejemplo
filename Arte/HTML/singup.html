@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Sing Up</title>
+      <!-- icon nos permite establecer el icono que se mostrara en el naveagor
+    el segundo y tercer link es el link para importar bootstrapt
+    con un link stylshet podemos importar la hojas de estilo en ki caso tengo 5 que utilizo patra diferntes secciones y elemntos
+  el script de fontawesomw me permite usar iconos de diacha pagina -->
+      <link rel="icon" href="/IMAGENES/Paginas/AG.png">
+      <link
+         href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+         rel="stylesheet"
+         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+         crossorigin="anonymous">
+      <script defer
+         src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+         crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="/CSS/styles.css">
+      <link rel="stylesheet" href="/CSS/cartas.css">
+      <link rel="stylesheet" href="/CSS/linea.css">
+      <script src="https://kit.fontawesome.com/a2711aa4dc.js"
+         crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="/CSS/sesion.css">
+   </head>
+   <body>
+      <div class="total">
+         <div class="element">
+            <img src="/IMAGENES/Paginas/fondo3.jpeg" alt="" id="imagen">
+         </div>
+         <div class="elment">
+
+            <form action="" method="POST" id="form">
+
+               <div class="con">
+
+                  <header class="head-form">
+                     <h2>Registrarse</h2>
+
+                     <p>login here using your email and password</p>
+                  </header>
+                  <br>
+                  <div class="field-set">
+                     <input class="form-input" id="email" type="text"
+                        placeholder="@Email" required>
+                     <br>
+                     <input class="form-input" id="nombre" type="text"
+                        placeholder="Nombre" required>
+                     <br>
+                     <input class="form-input" type="password"
+                        placeholder="Contraseña" id="pwd" name="password"
+                        required>
+                     <input class="form-input" type="password"
+                        placeholder="Contraseña" id="pwdd" name="password"
+                        required>
+
+                     <br>
+                     <p id="warnings"></p>
+                     <button type="submit" class="log-in">Sign Up </button>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+      <script src="/JS/singup.js"></script>
+   </body>
+</html>

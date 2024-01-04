@@ -1,0 +1,329 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  scroll-behavior: smooth;
+  background-image:linear-gradient(   /*Linear gradiente nos permite hacer un degradado*/
+  0deg,
+  rgb(255, 255, 255,0.7
+  ),
+  rgb(255, 255, 255,0.7
+  )
+  )
+  ,url("/IMAGENES/Paginas/FondoE.jpg") ;
+  background-position: center;
+
+min-width: 400px;
+}                    /*Min width nos permite establecerl el minimo que queremos que se pueda hacer nuestra pantalla*/
+.c-item {
+  height: 400px;     /*C item nos permite modifciar un item dle corousel de bootstrap*/
+}
+.navbar{
+  margin-top: 0px;   /*Nav bar es la calse de nav de bootsrapt*/
+  height: auto;
+  width: 100%;
+  position:fixed;   /*Position fixed nos permite mantener su psocion en pantalla fija*/
+  z-index: 10;      /*Z index nos permie establecer su posicion en el eje z o profunidad*/
+}
+li{
+  text-align: justify;      /*Justify nos permite justifcar un texto*/
+  padding-left: 50px;
+padding-right: 50px;
+}
+.arte p{
+  text-align: justify;
+  padding-left:50px;
+padding-right:50px;
+}
+.car{
+  padding-top: 150px;
+}
+.menu a{
+  font-size:20px;
+}
+h1{
+text-align: center;
+font-size: 60px;
+padding: 0px;
+}
+.arte{
+  padding-top:100px;
+}
+.text-bg-dark{
+  text-align: center;
+  font-size: 80px;
+  opacity:75%;
+  padding-left:50px;
+  padding-right: 50px;
+  margin-top:55px;
+}
+.c-img {                 /*C image es la clase de una imagen del carousel de bootstrapt*/
+  height: 100%;
+  object-fit:cover;      /*cover nos permite cubrir todo*/
+  filter: br5ightness(0.6);
+  -webkit-filter: brightness(0.6);
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+
+a:hover{
+  color: white;
+}
+
+.hero .tit{
+  color: black;
+  font-size:40px;
+  padding-bottom:10px;
+  padding-left:150px;
+  text-align: start;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.arte p{
+  margin:10px;
+}
+.arte{
+  align-items: center;
+  text-align: left;
+  justify-content: center;
+}
+.container-sm{
+  height:400px;
+  width:600px;
+}
+.container-sm img{
+width:100%;
+height: 100%;
+}
+@media screen and (max-width:800px) {       /*utilizo grid para mostra mis cosas en forma de cuadriculo en este caos las cartas*/
+  /*aqui establesco el tamao del grid y la direccion en este caso columnas*/
+  .musica{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width:90%;
+    padding-left: 0px;
+  }
+  .musica iframe{
+    width:100%;                /*i frame nos permite instar un docmeunto html en este caso inserto la web de spotify*/
+    height:250px;
+    padding:5px;
+  }
+  .arte .container{
+    display: grid;                          /*utilizo grid para mostra mis cosas en forma de cuadriculo en este caos las cartas*/
+                                             /*aqui establesco el tamao del grid y la direccion en este caso columnas*/
+    grid-template-columns: repeat(2,1fr);
+    width:90%;
+  }
+  .container img{
+    width: 70%;
+    height:100px;
+    padding: 1px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+  .text-bg-dark{
+    text-align: center;
+  font-size: 80px;
+  opacity:75%;
+  padding-left:50px;
+  padding-right: 50px;
+  margin-top:55px;
+  }
+  .container-sm{
+    height:200px;
+    width:300px;
+  }
+  body{
+    background-image:linear-gradient(
+      0deg,
+      rgb(255, 255, 255,0.7
+      ),
+      rgb(255, 255, 255,0.7
+      )
+      )
+      ,url("/IMAGENES/Paginas/FondoE.jpg") ;
+      background-position: center;
+  }
+  .contacto{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    overflow: auto;
+    height: auto;
+    width: 80%;
+  }
+}
+  .mapouter{position:relative;          /*position relative se usa para que este dependa de la posicion padre*/
+    text-align:center;
+    height:300px;width:350px;
+  }
+  
+  .gmap_canvas {overflow:hidden;        /*overflow se utiliza para realiza una cierta accion cuando nustros elemntos se desborden*/
+    background:none!important;
+    height:300px;width:350px;
+  }
+  iframe{
+  width: 600px;
+  height:350px;
+  }
+.fot{
+  background-color: white;
+}
+.media{
+  width:90%;
+  margin:25px;
+}
+.media h4{
+  text-align: center;
+  color: grey;
+}
+h6{
+  text-align: center;
+}
+.media h4:hover{
+  color: black;
+  scale:1.02;
+}
+
+.col a:hover{
+  color:black;
+}
+.col{
+  display: grid;
+
+}
+.col p{
+  justify-content: center;
+  text-align: center;
+}
+.col a{
+  text-align: center;
+  color: grey;
+}
+.iconos_media{
+  padding-top:20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.iconos_media a:hover{
+  color: aqua;
+  text-align: center;
+  }
+.fa-brands{
+    margin:5px;
+    font-size: 30px;
+  }
+.fa-solid{
+  
+  margin:5px;
+  font-size: 30px;
+}
+.mapa{
+  margin-left:50px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.modal-body p{
+  width: 80%;
+}
+.modal-body {
+display: flex;
+justify-content: center;
+flex-direction:row;
+align-items: center;
+}
+.modal-body p{
+  text-justify: center;
+}
+.contacto{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+.mapa .fa-brands{
+  margin:5px;                         /*Fa brands y fa solid son clases de iconos del fontawsome*/
+  font-size: 20px;
+}
+.mapa .fa-solid{
+margin:5px;
+font-size: 20px;
+}
+.mapa form{
+display: inline-flex;
+flex-direction:column;
+}
+textarea{
+resize: none;
+}
+.enviar{
+  display: inline-block;
+    color: #ffffff;
+  
+    width: 280px;
+    height: 50px;
+  
+    padding: 0 20px;
+    background: #000000;
+    border-radius: 5px;
+    
+    outline: none;
+    border: none;
+  
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s linear;
+    
+    margin: 7% auto;
+    letter-spacing: 0.05em;
+}
+
+.mapouter{position:relative;
+  text-align:center;              /*la clase mapamouter, gmap canvas nos permiten editar el iframe que utilice para insertar el mapa*/
+  height:600px;width:700px;}
+
+.gmap_canvas {overflow:hidden;
+  background:none!important;
+  height:600px;width:700px;}
+
+.arte .container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width:90%;
+}
+ .arte .container img{
+    width: 100%;
+    height:300px;
+    padding: 1px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: #6e6c6c 2px 2px 2px;  
+}
+.modal-body p{
+  text-justify: auto;
+  justify-content: center;
+  width:80%;
+}
+
+.arte p{
+  text-align: justify;
+}
+
+.musica{
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  width:100%;
+}
+.musica iframe{
+  width:100%;
+  padding:5px;
+}

@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icon nos permite establecer el icono que se mostrara en el naveagor
+    el segundo y tercer link es el link para importar bootstrapt
+    con un link stylshet podemos importar la hojas de estilo en ki caso tengo 5 que utilizo patra diferntes secciones y elemntos
+  el script de fontawesomw me permite usar iconos de diacha pagina -->
+    <link rel="icon" href="/IMAGENES//Paginas/AG.png">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous">
+    <script defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <link rel="stylesheet" href="/CSS/cartas.css">
+    <link rel="stylesheet" href="/CSS/linea.css">
+    <script src="https://kit.fontawesome.com/a2711aa4dc.js"
+      crossorigin="anonymous"></script>
+
+    <title>ArtGallery</title>
+  </head>
+  <body>
+    <!--
+      //nav bar 
+para el menu utilce la clase navbar de bootstrapt que ya nos viene con ciertos parametros a los cuales podemos añadir
+imagenes, textos, navbar brands etc para colapsar la nav se utiliza un boton con la clase nav bar toggle y de data le pasamos 
+la opcion collapse
+  //carousel
+para el caoruse utilice la clase carousel slide que  nos crea un carousel al cual le podemos añadir imagenes, botones de control 
+con las opciones data para saber cual caoruse usar y la opcion data para deslisarce a cierto elemnto, para añadir itema al 
+carousel se usa la clase item ya sea item normal o active que sera con el que incia, para usar botones en el caroucel se debe usar
+la clase carousel control y especificar la ccion con data-slide ya sea prev o nxt
+//body 
+para la estructura de mi pagian utilice divs, secciones, contemedores de bootrsap como container-sm, h, p ul,li etc.
+//Modal
+para el modal utilice 2 modales de tipo estatico los cuels mando llamr desde un <a> con la opcion data-bs-toggle="modal" y 
+  data-bs-target="id" el cual llamra al modal con el id cada ue lo activemos.
+-->
+ <!--menu nav bar-->
+    <div class="menu"> 
+      <nav class="navbar navbar-expand-lg bg-light ">
+        <div class="container-fluid">
+          <img src="/IMAGENES//Paginas/AG.png" alt="Logo" width="70" height="70"
+            class="d-inline-block align-text-top">
+          <a class="navbar-brand" href="../index.html">ArtGallery</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Arte
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="../index.html#arte">Definición
+                    </a></li>
+                  <li><a class="dropdown-item" href="../index.html#linea">Linea
+                      del tiempo</a></li>
+                  <li><a class="dropdown-item" href="../index.html#fot">Contacto</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Tipos de Arte
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/HTML/pintura.html">Pintura</a></li>
+                  <li><a class="dropdown-item" href="/HTML/musica.html">Música</a></li>
+                  <li><a class="dropdown-item" href="/HTML/Arquitectura.html">Arquitectura</a></li>
+                  <li><a class="dropdown-item" href="/HTML/escultura.html">Escultura</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Galerias
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/HTML/GaleriaP.html">Pintura</a></li>
+                  <li><a class="dropdown-item" href="/HTML/GaleriaM.html">Música</a></li>
+                  <li><a class="dropdown-item" href="/HTML/GaleriaA.html">Arquitectura</a></li>
+                  <li><a class="dropdown-item" href="/HTML/GaleriaE.html">Escultura</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="/IMAGENES/Paginas/user.png" alt="">
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/HTML/Login.html">Iniciar
+                      Sesion</a></li>
+                  <li><a class="dropdown-item" href="/HTML/singup.html">Registrarse</a></li>
+                </ul>
+              </li>
+            </ul>
+
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search"
+                placeholder="Buscar" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!--carousel slide fade con controles-->
+    <div class="car">
+      <div id="hero-carousel" class="carousel slide carousel-fade"
+        data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#hero-carousel"
+            data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#hero-carousel"
+            data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#hero-carousel"
+            data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#hero-carousel"
+            data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+ <!--carousel inner para añadir itemas-->
+        <div class="carousel-inner">
+          <a href="/HTML/pintura.html">
+
+             <!--item active para el elemnto inicial-->
+            <div class="carousel-item active c-item" data-bs-interval="4000">
+              <img src="/IMAGENES/Carta_Carousel/Pintura.jpg" class="img-fluid
+                w-100 H-100 c-img" alt="Slide 1">
+              <div class="carousel-caption top-0 mt-4">
+                <h1 class="badge text-bg-dark position-relative">Pintura</h1>
+              </div>
+            </div>
+          </a>
+          <a href="/HTML/escultura.html">
+ <!--carousel item oara añadir un nuevo elemento-->
+            <div class="carousel-item c-item" data-bs-interval="4000">
+              <img src="/IMAGENES/Carta_Carousel/Escultura.jpg" class="img-fliud
+                d-block w-100 c-img " alt="Slide 2">
+              <div class="carousel-caption top-0 mt-4">
+                <h1 class="badge text-bg-dark">Escultura</h1>
+              </div>
+            </div>
+
+          </a>
+          <a href="/HTML/Arquitectura.html">
+
+            <div class="carousel-item c-item" data-bs-interval="4000">
+              <img src="/IMAGENES/Carta_Carousel/Arquitectura.jpg"
+                class="d-block w-100 c-img" alt="Slide 3">
+              <div class="carousel-caption top-0 mt-4">
+                <h1 class="badge text-bg-dark">Arquitectura</h1>
+
+              </div>
+            </div>
+          </a>
+
+          <a href="/HTML/musica.html">
+
+            <div class="carousel-item c-item" data-bs-interval="4000">
+              <img src="/IMAGENES/Carta_Carousel/Musica.jpg" class="d-block
+                w-100 c-img" alt="Slide 4">
+              <div class="carousel-caption top-0 mt-4">
+                <h1 class="badge text-bg-dark">Mùsica</h1>
+
+              </div>
+            </div>
+          </a>
+
+        </div>
+        <button class="carousel-control-prev" type="button"
+          data-bs-target="#hero-carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button"
+          data-bs-target="#hero-carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="arte" id="arte">
+       <!--la seccion arte practicamnet es la hoja base-->
+      <section>
+        <h1>¿Qué es el arte?</h1>
+        <p>
+          <ul>
+            <li>
+              El arte se entiende generalmente como cualquier actividad o
+              producto que se realiza con la finalidad
+              estetica y tambien comunicativo con la finalidad de esxpresar
+              sentimientos, ideas, emociones atraves
+              del uso de diferentes recursos, como los plásticos, lingüísticos,
+              sonoros, corporales y mixtos.
+            </li>
+            <li>
+              A lo largo de la historia, la palabra “arte” se ha ido expandiendo
+              por todo el mundo en todas sus formas. Antiguamente,
+              solo se consideraba arte a algunas disciplinas, como la pintura,
+              el dibujo, el canto, la literatura y la danza.
+              Hoy el concepto de arte abarca muchas más técnicas y formas.
+            </li>
+            <li>
+              El avance de la tecnología es uno de los pilares fundamentales que
+              permitieron la creación y el desarrollo de nuevas formas de arte.
+              Sin embargo, no todos los historiadores y filósofos están de
+              acuerdo con la definición de arte actual.
+            </li>
+            <li>
+              Comúnmente, el término “arte” es confundido con el de «artesano».
+              Un artesano es aquel que reproduce múltiples obras y las
+              comercializa, mientras que, tradicionalmente, se considera que el
+              arte se basa en obras únicas e irrepetibles.
+            </li>
+          </ul>
+           <!--+container sm es la lcase de bootsrpta para un contnendor pequeño -->
+          <div class="container-sm">
+            <img src="/IMAGENES/Paginas/arte.jpg" class="rounded float-center"
+              alt="">
+          </div>
+        </p>
+        <h1>¿Donde se origina el arte?</h1>
+        <p>El origen de las artes es incierto e
+          implica no solo la estética sino
+          también la conciencia de la creación
+          de una obra de arte. Algunos
+          historiadores del arte han definido la
+          cuna del nacimiento del arte en la
+          cueva de Chauvet, donde se
+          encuentra la pintura rupestre más
+          antigua descubierta, que data de
+          hace aproximadamente 30.000
+          años.
+          Posteriormente, los historiadores
+          clasifican el arte por períodos, que a
+          su vez se dividen en estilos y, en la
+          actualidad, se conoce el arte por
+          escuelas y corrientes artísticas.
+          En este sentido, el arte rupestre
+          sería la primera forma de arte.
+          Luego, existen las artes surgidas de
+          las antiguas civilizaciones antes de
+          la caída del Imperio romano (476 a.
+          C.) como el arte en Egipto, India,
+          Persia, Armenia, China, la Antigua
+          Grecia y la Antigua Roma.
+          Desde el siglo V, cuando empieza la
+          Edad Media, los estilos y sus
+          influencias son más definidos, como
+          se expone en la siguiente linea.
+          De este modo, la historia del arte no
+          solo estudia las distintas
+          manifestaciones artísticas, sino que
+          establece periodizaciones
+          (prehistórico, antiguo, clásico,
+          medieval, moderno,
+          contemporáneo), clasifica estilos
+          (gótico, barroco, neoclásico, etc.), y
+          delimita movimientos, tendencias y
+          escuelas (romanticismo,
+          simbolismo, expresionismo,
+          dadaísmo, surrealismo, etc.).</p>
+      </section>
+      <section class="linea" id="linea">
+         <!--page es mi div del fondo, time line es mi linea que se colorea de negro groupes la divicion  en la 
+        dentro esta micar que se compne del contenido, año, dos cartas, el titulo,parrafos etc.-->
+        <div class="page">
+          <div class="timeline">
+            <div class="timeline__group">
+              <span class="timeline__year time" aria-hidden="true">24,000 a.c</span>
+              <div class="timeline__cards">
+                <div class="timeline__card card">
+                  <div class="card__content">
+                    <h3 class="card__title r-title">LINEA DEL TIEMPO DEL ARTE</h3>
+                    <p>Prehistoria</p>
+                    <div class="time_image">
+                      <img src="/IMAGENES/Linea_Tiempo/prehistoric.jpg" alt="">
+                      <p>El arte prehistórico solía representar escenas de caza
+                        o figuras asociadas a divinidades.
+                        Además de pinturas, pueden mencionarse las esculturas
+                        prehistóricas, que en Europa se desarrollaron durante el
+                        periodo paleolítico.
+                        Huesos, placas de marfil, rocas y metales permitían
+                        crear estas esculturas.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline__group">
+                  <span class="timeline__year time" aria-hidden="true">1,295
+                    a.c.</span>
+                  <div class="timeline__cards">
+                    <div class="timeline__card card">
+                      <div class="card__content">
+                        <p>Egipcio</p>
+                        <div class="time_image">
+                          <img src="/IMAGENES/Linea_Tiempo/egipci.jpg" alt="">
+                          <p>El arte egipcio tiende al gigantismo, es decir,
+                            muchos de sus edificios y esculturas son de
+                            dimensiones colosales.
+                            La pintura y la escultura en relieve empleada en
+                            templos y tumbas, unido al empleo de abundantes
+                            jeroglíficos ha permitido
+                            conocer con gran detalle la historia del Antiguo
+                            Egipto.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline__group">
+                  <span class="timeline__year time" aria-hidden="true">440 a.c.</span>
+                  <div class="timeline__cards">
+                    <div class="timeline__card card">
+                      <div class="card__content">
+                        <p> Grecia </p>
+                        <div class="time_image">
+                          <img src="/IMAGENES/Linea_Tiempo/griego.jpg" alt="">
+                          <p>El Arte Griego en la antigüedad tiene como
+                            característica fundamental tener un alto idealismo
+                            estético, lo cual implica que el arte representa no
+                            la realidad cruda
+                            y directa sino una visión idílica y perfecta que se
+                            percibe por el uso de la proporcionalidad y
+                            equilibrio de los elementos, así como por su interés
+                            en reflejar en las obras artísticas
+                            las líneas de la figura humana a la perfección;
+                            tanto en el dibujo como en la escultura.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline__group">
+                  <span class="timeline__year time" aria-hidden="true">50 d.c.</span>
+                  <div class="timeline__cards">
+                    <div class="timeline__card card">
+                      <div class="card__content">
+                        <p>Romano </p>
+                        <div class="time_image">
+                          <img src="/IMAGENES/Linea_Tiempo/romano.jpg" alt="">
+                          <p>El arte romano fue un movimiento artístico europeo
+                            comprendido en los siglos XI, XII y XIII. Se
+                            caracteriza por el uso de un lenguaje específico,
+                            con coherencia y realismo, en diversas
+                            manifestaciones, principalmente la arquitectura, la
+                            escultura y la pintura</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline__group">
+                  <span class="timeline__year time" aria-hidden="true">545 d.c.</span>
+                  <div class="timeline__cards">
+                    <div class="timeline__card card">
+                      <div class="card__content">
+                        <p>Bizantino</p>
+                        <div class="time_image">
+                          <img src="/IMAGENES/Linea_Tiempo/bizantino.jpg"
+                            alt="">
+                          <p>El arte bizantino (siglos IV-XV) se caracteriza en
+                            general por un alejamiento del naturalismo de la
+                            tradición clásica, hacia lo más abstracto y
+                            universal,
+                            por una clara preferencia por las representaciones
+                            bidimensionales, y por un predominio de las obras de
+                            arte de contenido religioso.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline__group">
+                  <span class="timeline__year time" aria-hidden="true">1,300
+                    d.c.</span>
+                  <div class="timeline__cards">
+                    <div class="timeline__card card">
+                      <div class="card__content">
+                        <p>Gótico</p>
+                        <div class="time_image">
+                          <img src="/IMAGENES/Linea_Tiempo/gotico.jpg" alt="">
+                          <p>Representar la idea teocentrista de la luz de Dios.
+                            Su aplicación en la arquitectura religiosa, como
+                            monasterios y catedrales.
+                            El uso del arco ojival que terminaba en forma
+                            apuntada y generaba sensación de gran altura. Se
+                            aplicaba para las cúpulas, puertas y ventanales.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline__group">
+                  <span class="timeline__year time" aria-hidden="true">1482 d.c.</span>
+                  <div class="timeline__cards">
+                    <div class="timeline__card card">
+                      <div class="card__content">
+                        <p> Renacimiento</p>
+                        <div class="time_image">
+                          <img src="/IMAGENES/Linea_Tiempo/renaciminto.jpg"
+                            alt="">
+                          <p>La principal característica del Renacimiento radica
+                            en el impulso de la secularización de la sociedad.
+                            Se llama secularización a la transformación de una
+                            sociedad organizada en función de la doctrina
+                            religiosa, a una sociedad con intereses
+                            diversificados y autónomos respecto de la misma.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline__group">
+                  <span class="timeline__year time" aria-hidden="true">1,598
+                    d.c.</span>
+                  <div class="timeline__cards">
+                    <div class="timeline__card card">
+                      <div class="card__content">
+                        <p>Manierismo </p>
+                        <div class="time_image">
+                          <img src="/IMAGENES/Linea_Tiempo/maniersmo.jpg"
+                            alt="">
+                          <p>Es el momento en que se pierde lo más propio del
+                            clasicismo y la belleza clásica: proporciones,
+                            armonía, serenidad, equilibrio. El manierismo es
+                            subjetivo, inestable.
+                            Los artistas se dejan llevar por sus gustos,
+                            alejándose de lo verosímil, tendiendo a la
+                            irrealidad y a la abstracción.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline__group">
+                  <span class="timeline__year time" aria-hidden="true">1,598
+                    d.c.</span>
+                  <div class="timeline__cards">
+                    <div class="timeline__card card">
+                      <div class="card__content">
+                        <p> Barroco </p>
+                        <div class="time_image">
+                          <img src="/IMAGENES/Linea_Tiempo/barroco.jpg" alt="">
+                          <p>Como barroco se denomina un periodo histórico,
+                            artístico y cultural caracterizado por una gran
+                            exuberancia ornamental que se manifestó en el arte,
+                            la literatura, la música y la arquitectura abarcando
+                            los siglos XVII y XVIII.
+                            El barroco surgió en Italia extendiéndose al resto
+                            de Europa y América.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline__group">
+                  <span class="timeline__year time" aria-hidden="true">1,808
+                    d.c.</span>
+                  <div class="timeline__cards">
+                    <div class="timeline__card card">
+                      <div class="card__content">
+                        <p> Neoclasicismo </p>
+                        <div class="time_image">
+                          <img src="/IMAGENES/Linea_Tiempo/neoclasico.jpg"
+                            alt="">
+                          <p>El neoclasicismo fue un movimiento artístico y
+                            literario que surgió a mediados del siglo XVIII y
+                            abarcó hasta el siglo XIX. Tenía como base la
+                            renovación de los valores filosóficos y estéticos de
+                            la Antigüedad Clásica y el culto a la razón,
+                            interpretados como modelos para la construcción de
+                            la modernidad.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline__group">
+                  <span class="timeline__year time" aria-hidden="true">1,830
+                    d.c.</span>
+                  <div class="timeline__cards">
+                    <div class="timeline__card card">
+                      <div class="card__content">
+                        <p> Romanticismo </p>
+                        <div class="time_image">
+                          <img src="/IMAGENES/Linea_Tiempo/romantisismo.jpg"
+                            alt="">
+                          <p>La transición del siglo XVIII al siglo XIX estuvo
+                            marcada por la aparición del romanticismo, un
+                            movimiento artístico y literario que hacía de la
+                            libertad creativa y la expresión de la subjetividad
+                            el centro de su proclama. El romanticismo
+                            se oponía a la estética del neoclasicismo, regida
+                            por la razón y la moral.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline__group">
+                  <span class="timeline__year time" aria-hidden="true">1882 d.c.</span>
+                  <div class="timeline__cards">
+                    <div class="timeline__card card">
+                      <div class="card__content">
+                        <p> Impresionismo </p>
+                        <div class="time_image">
+                          <img src="/IMAGENES/Linea_Tiempo/impresionismo.jpg"
+                            alt="">
+                          <p>El impresionismo es un estilo pictórico que se
+                            origina en Francia, en la segunda mitad del siglo
+                            XIX. Se caracteriza por su persistente
+                            experimentación con la iluminación (similar al
+                            luminismo). El manejo de la luz se considera como un
+                            factor crucial para alcanzar belleza y balance en la
+                            pintura.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline__group">
+                  <span class="timeline__year time" aria-hidden="true">1,893
+                    d.c.</span>
+                  <div class="timeline__cards">
+                    <div class="timeline__card card">
+                      <div class="card__content">
+                        <p> Expresionismo </p>
+                        <div class="time_image">
+                          <img src="/IMAGENES/Linea_Tiempo/expresionismo.jpg"
+                            alt="">
+                          <p>Surgido a principios del siglo XX en el país
+                            germano, el expresionismo se define como un
+                            movimiento de vanguardia caracterizado por la
+                            representación subjetiva, distorsionada y deformada
+                            de la realidad, reaccionando de manera contraria a
+                            los principios de objetividad del impresionismo.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline__group">
+                  <span class="timeline__year time" aria-hidden="true">1,901
+                    d.c.</span>
+                  <div class="timeline__cards">
+                    <div class="timeline__card card">
+                      <div class="card__content">
+                        <p> Art Nouveau </p>
+                        <div class="time_image">
+                          <img src="/IMAGENES/Linea_Tiempo/art noveu.jpg"
+                            alt="">
+                          <p>El art nouveau se caracteriza por la presencia de
+                            elementos de la naturaleza, enfatizando sus líneas
+                            rebeldes como una analogía a la libertad frente a la
+                            industrialización. Es altamente decorativo, llegando
+                            a ser definido por corrientes posteriores como un
+                            movimiento de ornamentación excesiva.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline__group">
+                  <span class="timeline__year time" aria-hidden="true">1,910
+                    d.c.</span>
+                  <div class="timeline__cards">
+                    <div class="timeline__card card">
+                      <div class="card__content">
+                        <p> Cubismo </p>
+                        <div class="time_image">
+                          <img src="/IMAGENES/Linea_Tiempo/cubismo.jpg" alt="">
+                          <p>El cubismo es un movimiento artístico moderno que
+                            surgió alrededor de 1907 en París, Francia. Cuatro
+                            características importantes del cubismo son la
+                            aplicación de múltiples perspectivas, el uso de
+                            formas geométricas, una paleta de colores
+                            monocromática y un plano de imagen aplanado.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline__group">
+                  <span class="timeline__year time" aria-hidden="true">1,937
+                    d.c.</span>
+                  <div class="timeline__cards">
+                    <div class="timeline__card card">
+                      <div class="card__content">
+                        <p> Surrealismo </p>
+                        <div class="time_image">
+                          <img src="/IMAGENES/Linea_Tiempo/surrealismo.jpg"
+                            alt="">
+                          <p>El Surrealismo es una forma de arte que mezcla los
+                            temas de la fantasía, lo desconocido y lo onírico.
+                            Este movimiento artístico se fundó sobre un
+                            movimiento político anarquista y revolucionario y
+                            fue el sucesor del Dadaísmo.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline__group">
+                  <span class="timeline__year time" aria-hidden="true">1967 d.c.</span>
+                  <div class="timeline__cards">
+                    <div class="timeline__card card">
+                      <div class="card__content">
+                        <p> Pop Art </p>
+                        <div class="time_image">
+                          <img src="/IMAGENES/Linea_Tiempo/pop art.jpg" alt="">
+                          <p>Las obras reflejaban una crítica a la sociedad,
+                            caracterizada por el consumismo, la importancia de
+                            la imagen, el materialismo y la moda. A través de la
+                            sátira y la ironía, los artistas cuestionan los
+                            principios y valores que resaltan en ese momento en
+                            la sociedad</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section>
+         <!--galerias es mi divicio pricipal-->
+        <div class="galerias">
+          <h1>Visite nuestras galerias:</h1>
+           <!--container es la clase de mi acrat por asi decirlo y la crta se compone de una imagen y un badge-->
+          <div class="container">
+            <a href="/HTML/GaleriaP.html">
+              <div class="carta">
+                <h1 class="badge text-bg-dark position-relative">Pintura</h1>
+                <img src="/IMAGENES/Carta_Carousel/Pintura.jpg" alt="">
+              </div>
+            </a>
+            <a href="/HTML/GaleriaE.html">
+              <div class="carta">
+                <h1 class="badge text-bg-dark position-relative">Escultura</h1>
+                <img src="/IMAGENES/Carta_Carousel/Escultura.jpg" alt="">
+              </div>
+            </a>
+            <a href="/HTML/GaleriaA.html">
+              <div class="carta">
+                <h1 class="badge text-bg-dark position-relative">Arquitectura</h1>
+                <img src="/IMAGENES/Carta_Carousel/Arquitectura.jpg" alt="">
+              </div>
+            </a>
+            <a href="/HTML/GaleriaM.html">
+              <div class="carta">
+                <h1 class="badge text-bg-dark position-relative">Musica</h1>
+                <img src="/IMAGENES/Carta_Carousel/Musica.jpg" alt="">
+              </div>
+            </a>
+          </div>
+        </section>
+        <section class="fot" id="fot">
+          <footer>
+             <!--mi footer se compone de una div con un grid de 3 yotra div normal-->
+            <div class="media">
+              <div class="row align-items-start">
+                <div class="col">
+                  <h4>A cerca de..</h4>
+
+                  <a href="../index.html"><img src="/IMAGENES/Paginas/AG.png"
+                      alt="" width="50px" height="50px"></a>
+                  <a href="/HTML/Mapa.html">Mapa del sitio</a>
+
+                </div>
+                <div class="col">
+                  <h4>Nosotros</h4>
+                  <p>somos una empresa que se dedica a la exposición de
+                    distintos tipos de arte.</p>
+                </div>
+                <div class="col">
+                  <h4>Ayuda</h4>
+                  <a href="/HTML/Mapa.html">Contactanos</a>
+                  <a href="/HTML/Mapa.html">Preguntas frecuentes</a>
+                  <a href="#" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop2">Politìcas de privacidad</a>
+                  <a href="#" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">Tèrminos y Condiciones</a>
+                </div>
+              </div>
+              <div class="row align-items-start">
+                <div class="iconos_media">
+                  <a href=""><i class="fa-brands fa-facebook"></i></a>
+                  <a href=""><i class="fa-brands fa-instagram"></i></a>
+                  <a href=""><i class="fa-brands fa-twitter"></i></a>
+                  <a href=""><i class="fa-solid fa-envelope"></i></a>
+                </div>
+              </div>
+            </footer>
+          </section>
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+            data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Tèrminos y
+                    Condiciones</h5>
+                  <button type="button" class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="arte">
+
+                    <p>
+                      Términos y Condiciones de Uso <br>
+                      INFORMACIÓN RELEVANTE <br>
+
+                      Es requisito necesario para la adquisición de los
+                      productos que
+                      se ofrecen en este sitio, que lea y acepte los siguientes
+                      Términos y Condiciones que a continuación se redactan. El
+                      uso de
+                      nuestros servicios así como la compra de nuestros
+                      productos
+                      implicará que usted ha leído y aceptado los Términos y
+                      Condiciones de Uso en el presente documento. Todas los
+                      productos
+                      que son ofrecidos por nuestro sitio web pudieran ser
+                      creadas,
+                      cobradas, enviadas o presentadas por una página web
+                      tercera y en
+                      tal caso estarían sujetas a sus propios Términos y
+                      Condiciones.
+                      En algunos casos, para adquirir un producto, será
+                      necesario el
+                      registro por parte del usuario, con ingreso de datos
+                      personales
+                      fidedignos y definición de una contraseña.
+
+                      El usuario puede elegir y cambiar la clave para su acceso
+                      de
+                      administración de la cuenta en cualquier momento, en caso
+                      de que
+                      se haya registrado y que sea necesario para la compra de
+                      alguno
+                      de nuestros productos. vinicioesparza-dev.me no asume la
+                      responsabilidad en caso de que entregue dicha clave a
+                      terceros.
+                      Todas las compras y transacciones que se lleven a cabo por
+                      medio
+                      de este sitio web, están sujetas a un proceso de
+                      confirmación y
+                      verificación, el cual podría incluir la verificación del
+                      stock y
+                      disponibilidad de producto, validación de la forma de
+                      pago,
+                      validación de la factura (en caso de existir) y el
+                      cumplimiento
+                      de las condiciones requeridas por el medio de pago
+                      seleccionado.
+                      En algunos casos puede que se requiera una verificación
+                      por
+                      medio de correo electrónico.
+
+                      Los precios de los productos ofrecidos en esta Tienda
+                      Online es
+                      válido solamente en las compras realizadas en este sitio
+                      web.
+                      <br>
+
+                      LICENCIA <br>
+
+                      ArtGallery a través de su sitio web concede una licencia
+                      para
+                      que los usuarios utilicen los productos que son vendidos
+                      en este
+                      sitio web de acuerdo a los Términos y Condiciones que se
+                      describen en este documento.
+
+                      <br>USO NO AUTORIZADO <br>
+
+                      En caso de que aplique (para venta de software, templetes,
+                      u
+                      otro producto de diseño y programación) usted no puede
+                      colocar
+                      uno de nuestros productos, modificado o sin modificar, en
+                      un CD,
+                      sitio web o ningún otro medio y ofrecerlos para la
+                      redistribución o la reventa de ningún tipo.
+
+                      PROPIEDAD
+
+                      Usted no puede declarar propiedad intelectual o exclusiva
+                      a
+                      ninguno de nuestros productos, modificado o sin modificar.
+                      Todos
+                      los productos son propiedad de los proveedores del
+                      contenido. En
+                      caso de que no se especifique lo contrario, nuestros
+                      productos
+                      se proporcionan sin ningún tipo de garantía, expresa o
+                      implícita. En ningún esta compañía será responsables de
+                      ningún
+                      daño incluyendo, pero no limitado a, daños directos,
+                      indirectos,
+                      especiales, fortuitos o consecuentes u otras pérdidas
+                      resultantes del uso o de la imposibilidad de utilizar
+                      nuestros
+                      productos.
+
+                      <br>POLÍTICA DE REEMBOLSO Y GARANTÍA <br>
+
+                      En el caso de productos que sean mercancías irrevocables
+                      no-tangibles, no realizamos reembolsos después de que se
+                      envíe
+                      el producto, usted tiene la responsabilidad de entender
+                      antes de
+                      comprarlo. Le pedimos que lea cuidadosamente antes de
+                      comprarlo.
+                      Hacemos solamente excepciones con esta regla cuando la
+                      descripción no se ajusta al producto. Hay algunos
+                      productos que
+                      pudieran tener garantía y posibilidad de reembolso pero
+                      este
+                      será especificado al comprar el producto. En tales casos
+                      la
+                      garantía solo cubrirá fallas de fábrica y sólo se hará
+                      efectiva
+                      cuando el producto se haya usado correctamente. La
+                      garantía no
+                      cubre averías o daños ocasionados por uso indebido. Los
+                      términos
+                      de la garantía están asociados a fallas de fabricación y
+                      funcionamiento en condiciones normales de los productos y
+                      sólo
+                      se harán efectivos estos términos si el equipo ha sido
+                      usado
+                      correctamente. Esto incluye:
+
+                      – De acuerdo a las especificaciones técnicas indicadas
+                      para cada
+                      producto.
+                      – En condiciones ambientales acorde con las
+                      especificaciones
+                      indicadas por el fabricante.
+                      – En uso específico para la función con que fue diseñado
+                      de
+                      fábrica.
+                      – En condiciones de operación eléctricas acorde con las
+                      especificaciones y tolerancias indicadas.
+
+                      <br>COMPROBACIÓN ANTIFRAUDE <br>
+
+                      La compra del cliente puede ser aplazada para la
+                      comprobación
+                      antifraude. También puede ser suspendida por más tiempo
+                      para una
+                      investigación más rigurosa, para evitar transacciones
+                      fraudulentas.
+
+                      <br>PRIVACIDAD <br>
+
+                      Este vinicioesparza-dev.me garantiza que la información
+                      personal
+                      que usted envía cuenta con la seguridad necesaria. Los
+                      datos
+                      ingresados por usuario o en el caso de requerir una
+                      validación
+                      de los pedidos no serán entregados a terceros, salvo que
+                      deba
+                      ser revelada en cumplimiento a una orden judicial o
+                      requerimientos legales.
+
+                      La suscripción a boletines de correos electrónicos
+                      publicitarios
+                      es voluntaria y podría ser seleccionada al momento de
+                      crear su
+                      cuenta.
+
+                      ArtGallery reserva los derechos de cambiar o de modificar
+                      estos
+                      términos sin previo aviso.
+                    </p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary"
+                    data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary"
+                    data-bs-dismiss="modal">Entendido</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static"
+            data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Tèrminos y
+                    Condiciones</h5>
+                  <button type="button" class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="arte">
+
+                    <p>
+                      Política de privacidad <br>
+                      El sitio web vinicioesparza-dev.me es propiedad de
+                      ArtGallery,
+                      que es un controlador de datos de tus datos personales.
+                      Hemos adoptado esta Política de privacidad, que determina
+                      cómo
+                      procesamos la información recopilada por
+                      vinicioesparza-dev.me,
+                      que también proporciona las razones por las que debemos
+                      recopilar ciertos datos personales sobre ti. Por lo tanto,
+                      debes
+                      leer esta Política de privacidad antes de usar el sitio
+                      web de
+                      vinicioesparza-dev.me.
+
+                      Cuidamos tus datos personales y nos comprometemos a
+                      garantizar
+                      su confidencialidad y seguridad.
+
+                      <br>Información personal que recopilamos:<br>
+                      Cuando visitas vinicioesparza-dev.me, recopilamos
+                      automáticamente cierta información sobre tu dispositivo,
+                      incluida información sobre tu navegador web, dirección IP,
+                      zona
+                      horaria y algunas de las cookies instaladas en tu
+                      dispositivo.
+                      Además, a medida que navegas por el sitio, recopilamos
+                      información sobre las páginas web individuales o los
+                      productos
+                      que ves, qué sitios web o términos de búsqueda te
+                      remitieron al
+                      sitio y cómo interactúas con él. Nos referimos a esta
+                      información recopilada automáticamente como "Información
+                      del
+                      dispositivo". Además, podemos recopilar los datos
+                      personales que
+                      nos proporcionas (incluidos, entre otros, nombre,
+                      apellido,
+                      dirección, información de pago, etc.) durante el registro
+                      para
+                      poder cumplir con el acuerdo.
+
+                      <br>¿Por qué procesamos tus datos?<br>
+                      Nuestra máxima prioridad es la seguridad de los datos del
+                      cliente y, como tal, podemos procesar solo los datos
+                      mínimos del
+                      usuario, solo en la medida en que sea absolutamente
+                      necesario
+                      para mantener el sitio web. La información recopilada
+                      automáticamente se utiliza solo para identificar casos
+                      potenciales de abuso y establecer información estadística
+                      sobre
+                      el uso del sitio web. Esta información estadística no se
+                      agrega
+                      de tal manera que identifique a ningún usuario en
+                      particular del
+                      sistema.
+
+                      Puedes visitar el sitio sin decirnos quién eres ni revelar
+                      ninguna información por la cual alguien pueda
+                      identificarte como
+                      una persona específica. Sin embargo, si deseas utilizar
+                      algunas
+                      de las funciones del sitio web, o deseas recibir nuestro
+                      boletín
+                      informativo o proporcionar otros detalles al completar un
+                      formulario, puedes proporcionarnos datos personales, como
+                      tu
+                      correo electrónico, nombre, apellido, ciudad de
+                      residencia,
+                      organización y número de teléfono. Puedes optar por no
+                      proporcionar tus datos personales, pero es posible que no
+                      puedas
+                      aprovechar algunas de las funciones del sitio web. Por
+                      ejemplo,
+                      no podrás recibir nuestro boletín ni contactarnos
+                      directamente
+                      desde el sitio web. Los usuarios que no estén seguros de
+                      qué
+                      información es obligatoria pueden ponerse en contacto con
+                      nosotros a través de vinicioesparza-dev@gmail.com.
+
+                      <br>Tus derechos:<br>
+                      Si eres residente europeo, tienes los siguientes derechos
+                      relacionados con tus datos personales:<br>
+
+                      El derecho a ser informado.
+                      El derecho de acceso.
+                      El derecho a la rectificación.
+                      El derecho a borrar.
+                      El derecho a restringir el procesamiento.
+                      El derecho a la portabilidad de datos.
+                      El derecho a oponerte.
+                      <br>
+                      Derechos en relación con la toma de decisiones
+                      automatizada y la
+                      elaboración de perfiles.
+                      Si deseas ejercer este derecho, comunícate con nosotros a
+                      través
+                      de la información de contacto a continuación.
+
+                      Además, si eres residente europeo, destacamos que estamos
+                      procesando tu información para cumplir con los contratos
+                      que
+                      podríamos tener contigo (por ejemplo, si realizas un
+                      pedido a
+                      través del sitio), o de otra manera para seguir nuestros
+                      intereses comerciales legítimos enumerados anteriormente.
+                      Además, ten en cuenta que tu información puede
+                      transferirse
+                      fuera de Europa, incluidos Canadá y Estados Unidos.
+
+                      <br>Enlaces a otros sitios web:<br>
+                      Nuestro sitio puede contener enlaces a otros sitios web
+                      que no
+                      son de nuestra propiedad ni están controlados por
+                      nosotros. Ten
+                      en cuenta que no somos responsables de dichos sitios web
+                      ni de
+                      las prácticas de privacidad de terceros. Te recomendamos
+                      que
+                      estés atento cuando abandones nuestro sitio web y leas las
+                      declaraciones de privacidad de cada sitio que pueda
+                      recopilar
+                      información personal.
+
+                      <br>Seguridad de la información:<br>
+                      Aseguramos la información que proporcionas en servidores
+                      informáticos en un entorno controlado y seguro, protegido
+                      del
+                      acceso, uso o divulgación no autorizados. Mantenemos
+                      medidas de
+                      seguridad administrativas, técnicas y físicas razonables
+                      para
+                      proteger contra el acceso no autorizado, el uso, la
+                      modificación
+                      y la divulgación de datos personales bajo su control y
+                      custodia.
+                      Sin embargo, no se puede garantizar la transmisión de
+                      datos a
+                      través de Internet o redes inalámbricas.
+
+                      <br>Divulgación legal:<br>
+                      Divulgaremos cualquier información que recopilemos, usemos
+                      o
+                      recibamos si así lo requiere o lo permite la ley, como
+                      para
+                      cumplir con una citación o un proceso legal similar, y
+                      cuando
+                      creemos de buena fe que la divulgación es necesaria para
+                      proteger nuestros derechos, proteger tu seguridad o la
+                      seguridad
+                      de los demás, investigar el fraude o responder a una
+                      solicitud
+                      del gobierno.
+
+                      <br> Información de contacto:<br>
+                      Si deseas comunicarte con nosotros para comprender más
+                      sobre
+                      esta Política o deseas comunicarte con nosotros en
+                      relación con
+                      cualquier asunto sobre los derechos individuales y tu
+                      información personal, puedes enviarnos un correo
+                      electrónico a
+                      vinicioesparza-dev@gmail.com.
+                    </p>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary"
+                    data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary"
+                    data-bs-dismiss="modal">Entendido</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </body>
+
+      </html>

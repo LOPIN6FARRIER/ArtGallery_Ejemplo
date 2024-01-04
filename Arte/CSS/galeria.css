@@ -1,0 +1,124 @@
+.titulo{
+    font-size:20px;
+}
+.cartas{
+    padding-top:100px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width:90%;
+    margin-left:75px;
+    margin-right:10px;
+    grid-gap:30px;
+    transition: 300,ms;
+    -webkit-transition: 300,ms;
+    -moz-transition: 300,ms;
+    -ms-transition: 300,ms;
+    -o-transition: 300,ms;
+    overflow: auto;
+    height: auto;
+}
+ h1{
+    padding-top:150px;
+}
+.cartah h1{
+    padding-top:10px;
+}
+.cartah .datos{
+    margin:5px;
+    width: 90%;
+    background-color: white;
+    display: flex;
+   justify-content: center;
+   flex-direction:column;
+   align-items: center;
+  
+}
+.cartah img:hover{
+    scale:1.25;
+}
+.cartah{
+    width:100%;
+    background-color: white;
+    display: flex;
+   justify-content: center;
+   flex-direction:column;
+   align-items: center;
+   border: solid 1px;
+   border-color: black;
+}
+.cartah img{
+    margin:30px;
+    width: 80%;
+    height:250px;
+    padding:10px;
+    border-radius:15px;
+    transition:all 300ms;
+    -webkit-transition:all 300ms;
+    -moz-transition:all 300ms;
+    -ms-transition:all 300ms;
+    -o-transition:all 300ms;
+    -webkit-border-radius:15px;
+    -moz-border-radius:15px;
+    -ms-border-radius:15px;
+    -o-border-radius:15px;
+}
+
+@media screen and (max-width:800px) {
+    .cartah h1{
+        padding-top:30px;
+    }
+    .cartah{
+        width:100%;
+        background-color: white;
+        display: flex;
+       justify-content: center;
+       flex-direction:column;
+       align-items: center;
+       border: solid 1px;
+       border-color: black;
+    }
+    .cartah img{
+        margin:30px;
+        margin-bottom:0px;
+        width: 80%;
+        height:250px;
+        padding:10px;
+        padding-bottom:0px;
+        border-radius:15px;
+        transition:all 300ms;
+        -webkit-transition:all 300ms;
+        -moz-transition:all 300ms;
+        -ms-transition:all 300ms;
+        -o-transition:all 300ms;
+        -webkit-border-radius:15px;
+        -moz-border-radius:15px;
+        -ms-border-radius:15px;
+        -o-border-radius:15px;
+    }
+    .cartas{
+        padding-top:100px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width:80%;
+        grid-gap:30px;
+        transition: 300,ms;
+        -webkit-transition: 300,ms;
+        -moz-transition: 300,ms;
+        -ms-transition: 300,ms;
+        -o-transition: 300,ms;
+        overflow: auto;
+        height: auto;
+    }
+    .cartah .datos{
+        margin-top: 0px;
+        padding-top:0px;
+        width: 90%;
+        background-color: white;
+        display: flex;
+       justify-content: center;
+       flex-direction:column;
+       align-items: left;
+       text-align: center;
+      
+    }
+}
